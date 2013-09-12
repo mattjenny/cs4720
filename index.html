@@ -13,11 +13,49 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/my-styles.css" rel="stylesheet">
-    <style>
-    	#MapButton {
-    		margin-top: 70px;
-    	}
-    </style>
+
+    <!-- Code copied from geolocation tutorial on www.w3schools.com-->
+    <script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+
+function showPosition(position)
+  {
+  var latlon=position.coords.latitude+","+position.coords.longitude;
+
+  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+  +latlon+"&zoom=14&size=400x300&sensor=false";
+  document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
+  }
+
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="An unknown error occurred."
+      break;
+    }
+  }
+</script>
+    <!-- End borrowed code-->
+
 </head>
 <body>
 
@@ -53,7 +91,7 @@
     			<h3><em>University of Virginia</em></h3>
     			<p id="major-info"><em>Biomedical Engineering, B.S., 2014</em><br/>
     				<em>Computer Science, B.S., 2014</em></p>
-    			<h3><em>Contact:</em></h3>
+    			<h3 id="contact"><em>Contact:</em></h3>
     			<address><a href="mailto:mvj5fs@virginia.edu" id="email-info"><em>mvj5fs@virginia.edu</em></a></address>
     		</div>
     		<div class="span6">
@@ -71,7 +109,7 @@
     				<figcaption><i>Me back in my younger days.  Last Friday, to be specific.</i></figcaption>
     			</figure>
     		</div>
-    		<div class="span6">
+    		<div class="span6" id="about">
     			<header>
     				<h1>A Bit About Me</h1>
     			</header>
@@ -113,9 +151,22 @@
     		</div>
     	</div> 
 
+    	<div class="row bottom-section">
+    		<div class="span4">
+    			<header>
+    				<h1> Geolocation Demo</h1>
+    			</header>
+    			<p class="row-text">
+    				Press the button below to generate a Google Maps image centered on your current location.
+    			</p>
+    			<button onclick="getLocation()">Generate Map!</button>
+    		</div>
+    		<div id="mapholder"></div>
+    	</div>
+
 	</div>
 	    	<footer>
-			<div class="container">
+			<div class="container row-container">
 				<div id="footer_top" class="row">
 					<div class="span12">
 						<div class="row">
@@ -144,7 +195,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 
 		</footer>
 
