@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--css styling from Twitter bootstrap
+	footer css adapted from logobro.com
+	DOM element rotation code borrowed from Mark Sherriff-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,152 +11,13 @@
     <meta name="author" content="Matt Jenny">
 
     <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px;
-      }
-
-      header {
-      	color: #35586C;
-      }
-
-      .my_container {
-      	margin-left: 100px;
-      }
-
-      .top-row{
-      	margin-top: 40px;
-      }
-
-      .content-row{
-      	margin-top: 20px;
-      }
-
-      #major-info {
-      	margin-left: 30px;
-      	font-size: 20px;
-      	color: #333;
-      }
-
-      #email-info {
-      	margin-left: 30px;
-      	font-size: 20px;
-      }
-
-      #contact-info {
-      	font-size: 18px;
-      	color: #333;
-      }
-
-      .skewed-clockwise {
-	
-		text-align: center;
-		color: #555;
-		-webkit-transform:rotate(10deg);
-		-chrome-transform:rotate(10deg);
-		transform: rotate(10deg);
-		-webkit-box-shadow:4px 4px 10px rgba(0,0,0,0.5);
-		-moz-box-shadow:4px 4px 10px rgba(0,0,0,0.5);
-		-o-box-shadow:4px 4px 10px rgba(0,0,0,0.5);
-		box-shadow:4px 4px 10px rgba(0,0,0,0.5)
-	
-		}
-
-		.skewed-counterclockwise {
-	
-		text-align: center;
-		color: #555;
-		-webkit-transform:rotate(-10deg);
-		-chrome-transform:rotate(-10deg);
-		transform: rotate(-10deg);
-		-webkit-box-shadow:4px 4px 10px rgba(0,0,0,0.5);
-		-moz-box-shadow:4px 4px 10px rgba(0,0,0,0.5);
-		-o-box-shadow:4px 4px 10px rgba(0,0,0,0.5);
-		box-shadow:4px 4px 10px rgba(0,0,0,0.5)
-	
-		}
-
-		#cropped-profile-img {
-			height: 300px;
-			width: 220px;
-		}
-
-		#thumbs-up-img {
-			height: 260px;
-			width: 230px;
-		}
-
-		.row-text {
-			font-size: 18px;
-		}
-
-		#fig2 {
-			margin-left: 75px;
-			width: 220px;
-		}
-
-		#fig3 {
-			width: 230px;
-		}
-
-		#my-video {
-			width: 550px;
-		}
-
-		footer #footer_top{
-			border-bottom: 1px solid #222;
-			padding-bottom: 10px;
-			padding-top: 10px;
-		}
-
-		footer #footer_bottom{
-			border-top: 1px solid #444;
-			padding-top: 20px;
-		}
-
-		footer{
-			margin-top: 70px;
-	color: #666;
-	background-color: #333;
-	min-height: 100px;
-	border-top: 4px solid #000;
-}
-
-footer a{
-	color: #999;
-}
-
-footer a:hover{
-	color: #FFF;
-}
-
-footer h2{
-	color: #AAA;
-	margin-bottom: 10px;
-}
-
-footer p{
-	color: #AAA;
-}
-
-footer .container{
-	padding: 20px 0px;
-	
-}
-
-footer ul{
-	margin-left: 0px;
-}
-
-footer ul li{
-	list-style-type: none;
-}
-
-footer ul li a{
-	color: #268BD2;
-}
-    </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/my-styles.css" rel="stylesheet">
+    <style>
+    	#MapButton {
+    		margin-top: 70px;
+    	}
+    </style>
 </head>
 <body>
 
@@ -212,19 +76,19 @@ footer ul li a{
     				<h1>A Bit About Me</h1>
     			</header>
     			<p class="row-text">
-    				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. 
+    				Hey there!  I'm Matt, and I hail from the faraway land of Waynesboro, VA.  I grew up running, swimming, and playing tennis there, and then came to the University of Virginia three years ago.  At UVA, I hoped to find new interests both in and outside of school-- and that I did.  I joined the Club Frisbee team and Intervarsity Christian Fellowship, and those became my home away from home.  I have also become more involved in volunteering opportunities throughout my time at UVA.  I started tutoring through Madison House my first year, and have since become involved in Madison House leadership.  I also became a brother of Alpha Phi Omega, the co-ed service fraternity on ground that has changed my worldview.  By far the most incredible service opportunity that I've had, though, has been <a href="http://mattsbikeblog.wordpress.com/">biking across the country for affordable housing.</a>
     			</p>
     		</div>
     	</div> 
     	<div class="row content-row">
     		<div class="span6">
     			<p class="row-text">
-    				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+    				I was always interested in computer science, but I was looking for an interesting <em>application</em> of CS.  I found that in biomedical engineering, where I declared my major and joined the Computational Systems Biology lab under the direction of Dr. Jason Papin.  I also dove further into the field with a summer internship at the National Institutes of Health in Bethesda, MD.  Over time, however, I began to realize that my passions lay in Computer Science, so I declared a double major in the CS department and began to heavily pursue CS.  I found an internship on the Health and Sciences team at Palantir Technologies, and I will be joining the company for a full-time position next fall.  For now, I'm just trying to enjoy every day that I have left here and to take in everything that I can!
     			</p>
     		</div>
     		<div class="span6">
     			<figure class="skewed-clockwise" id="fig3">
-    				<img alt="My pretty face!" src="thumbs-up.png" id="images/thumbs-up-img"/>
+    				<img alt="My pretty face!" src="images/thumbs-up.png" id="thumbs-up-img"/>
     				<figcaption><i>"Shenandoah Valley!"</i></figcaption>
     			</figure>
     		</div>
@@ -281,7 +145,6 @@ footer ul li a{
 				</div>
 			</div>
 		</div>
-		<!--<div style="clear:both">-->
 
 		</footer>
 
